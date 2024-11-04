@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <h2 class="card-title text-primary">Prediction Result</h2>
+                        <p class="card-text"><strong>Detected Class:</strong> {{ prediction }}</p>
+                        <hr>
+                        <h4 class="text-secondary">Diagnosis</h4>
+                        <p class="card-text">{{ diagnosis }}</p>
+                        <a href="{{ url_for('upload_file') }}" class="btn btn-outline-primary mt-4">Analyze Another Image</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
